@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        img{
+            vertical-align: bottom;
+        }
+        .footer{
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .item-group{
+            width: 100%;
+            max-width: 1400px;
+            margin: auto;
+        }
+        .banner img{
+            width: 100%;
+        }
+        .title{
+            margin: 0 0px 20px;
+            padding: 30px 10px;
+            background-color: #ccc;
+        }
+        .title h2{
+            text-align: center;
+            font-size: 46px;
+        }
+        .title p{
+            font-size: 22px;
+            text-align: center;
+        }
+        .item{
+            margin: 0 10px 40px;
+        }
+        .item .text h3{
+            font-size: 24px;
+            text-align: center;
+        }
+        .item .pic img{
+            width: 100%;
+        }
+        .service{
+            margin: 60px 0;
+            background-color: #ffa;
+        }
+        .service .item{
+            margin: 0 0;
+        }
+        @media screen and (min-width: 768px){
+            .item-group{
+                display: flex;
+            }
+            .service .item{
+                display: flex;
+            }
+            .service .item .pic,
+            .service .item.text{
+                width: 50%;
+                margin: 0;
+            }
+            .service .item .text{
+                display: flex;
+                padding: 0 20px;
+                box-sizing: border-box;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        #menu_control{
+                position: absolute;
+                z-index: -2;
+                opacity: 0;
+            }
+            .header{
+                height: 50px;
+                background-color: #ccc;
+                position: relative;
+            }
+            .logo{
+                width: 60px;
+                height: 40px;
+                margin-left: 10px;
+            }
+            .logo a{
+                display: block;
+                height: 40px;
+            }
+            .logo img{
+                display: block;
+                padding: 5px 0px;
+            }
+            .menu_btn{
+                width: 40px;
+                height: 40px;
+                background-color: #000;
+                display: block;
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
+            .menu_btn span{
+                opacity: 0;
+                width: 1px;
+                height: 1px;
+                display: block;
+                overflow: hidden;
+            }
+            .menu_btn::before{
+                content: '';
+                position: absolute;
+                height: 2px;
+                left: 2px;
+                width: 36px;
+                background-color: #aaa;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                box-shadow: 0px 8px 0px #aaa,
+                            0px -8px 0px #aaa;
+            }
+            nav a{
+                display: block;
+                text-decoration: none;
+                color: rgb(41, 54, 20);
+                padding: 10px 20px;
+                border-bottom: 1px solid rgb(41, 54, 20);
+            }
+            #menu_control:checked ~ .header nav{
+                left: 0;
+            }
+
+            @media screen and (max-width: 767px){
+                nav{
+                    width: 80%;
+                    height: calc(100vh - 50px);
+                    background-color: rgb(194, 158, 158);
+                    position: absolute;
+                    top: 50px;
+                    left: -100%;
+                    transition: .5s;
+                }
+            }
+            @media screen and (min-width: 768px){
+                .menu_btn{
+                    display: none;
+                }
+                .header{
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: rgb(194, 158, 158);
+                    align-items: center;
+                }
+                .logo img{
+                    padding: 0 0 5px;
+                }
+                nav{
+                    position: relative;
+                    left: 0;
+                    display: flex;
+                    width: auto;
+                    height: auto;
+                    top: 0;
+                    background-color: transparent;
+                }
+                nav a{
+                    border-bottom: none;
+                }
+            }
+
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" name="" id="menu_control">
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://picsum.photos/60/40/?random"></a>
+        </h1>
+    <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+    </label>
+    <nav>
+        <a href="#">關於我們</a>
+        <a href="#">產品服務</a>
+        <a href="#">最新消息</a>
+        <a href="#">聯絡我們</a>
+        <a href="#">網站地圖</a>
+        <a href="#">首頁</a>
+    </nav>
+    </div>
+
+    <div class="banner">
+        <img src="https://picsum.photos/1400/500/?random1">
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sed ullam ratione iusto tempora labore, voluptatem odit doloremque error rem.</p>
+            </div>
+            <div class="item-group">
+                    <div class="item">
+                        <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random11">
+                        </div>
+                        <div class="text">
+                        <h3>title</h3>    
+                        <p>傢俱回去還不文本流行儘快成熟管理員，太多一系列明確請教昨日在此比例獨立改造面臨，最大表示接收都要一會，告訴會計及時實力。</p>
+                        </div>                
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random12">
+                        </div>
+                        <div class="text">
+                        <h3>title</h3>    
+                        <p>傢俱回去還不文本流行儘快成熟管理員，太多一系列明確請教昨日在此比例獨立改造面臨，最大表示接收都要一會，告訴會計及時實力。</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random13">
+                        </div>
+                        <div class="text">
+                        <h3>title</h3>    
+                        <p>傢俱回去還不文本流行儘快成熟管理員，太多一系列明確請教昨日在此比例獨立改造面臨，最大表示接收都要一會，告訴會計及時實力。</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="service">
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random1">
+                        </div>
+                    <div class="text">
+                        <h3>title</h3>    
+                        <p>傢俱回去還不文本流行儘快成熟管理員，太多一系列明確請教昨日在此比例獨立改造面臨，最大表示接收都要一會，告訴會計及時實力。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>產品服務</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae sed ullam ratione iusto tempora labore, voluptatem odit doloremque error rem.</p>
+            </div>
+            <div class="item-group">
+                    <div class="item">
+                        <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random21">
+                        </div>
+                        <div class="text">
+                        <h3>title</h3>    
+                        <p>傢俱回去還不文本流行儘快成熟管理員，太多一系列明確請教昨日在此比例獨立改造面臨，最大表示接收都要一會，告訴會計及時實力。</p>
+                        </div>                
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random22">
+                        </div>
+                        <div class="text">
+                        <h3>title</h3>    
+                        <p>傢俱回去還不文本流行儘快成熟管理員，太多一系列明確請教昨日在此比例獨立改造面臨，最大表示接收都要一會，告訴會計及時實力。</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random23">
+                        </div>
+                        <div class="text">
+                        <h3>title</h3>    
+                        <p>傢俱回去還不文本流行儘快成熟管理員，太多一系列明確請教昨日在此比例獨立改造面臨，最大表示接收都要一會，告訴會計及時實力。</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random24">
+                        </div>
+                        <div class="text">
+                        <h3>title</h3>    
+                        <p>傢俱回去還不文本流行儘快成熟管理員，太多一系列明確請教昨日在此比例獨立改造面臨，最大表示接收都要一會，告訴會計及時實力。</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        &copy; copyright 2021 by pichu
+    </div>
+
+
+
+</body>
+</html>
